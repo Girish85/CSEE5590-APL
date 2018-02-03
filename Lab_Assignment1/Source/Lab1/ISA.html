@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISA</title>
+    <style>
+        #container{
+            width: 75%;
+            height: 100%;
+            margin-left: 90px;
+            margin-top: 40px;
+            border-bottom: solid gray 2px;
+            background: #cd9557;
+            border-radius: 15px;
+        }
+    </style>
+    <script>
+        function clicked() {
+            window.alert("Enrolled Successfully");
+            document.getElementById("avail").innerHTML = "18";
+            document.getElementById("fill").innerHTML = "42";
+        }
+    </script>
+</head>
+<body bgcolor="#cd9557">
+<div id="container">
+    <div style="display: inline-flex;background: #8BA5FF;padding-left: 10px;padding-top: 10px;padding-bottom: 10px;border-radius: 10px">
+        <img src="ISA.png" style="width: 150px;height: 120px">
+        <div>
+            <div style="display: inline-flex">
+                <h2 style="font-size: 25px;font-family: 'Baskerville Old Face';margin-bottom: 0px;color: #fdfff3;padding-left: 90px;margin-top: 0px"><b style="color: rgba(96,17,255,1)">CS5573: Information Security and Assurance</b></h2>
+                <h3 style="padding-left: 90px;padding-top: 1px;color: #fdfff3;margin-top: 5px;margin-bottom: 0px"><b style="color: #0b2e13">Instructor :</b> Mahesh Maddumala</h3>
+            </div>
+            <div style="display: inline-flex">
+                <h3 style="padding-left: 90px;padding-top: 1px;color: #0b2e13;margin-top: 5px;margin-bottom: 0px"><b style="color: brown">Total Seats :-</b> 60</h3>
+                <h3 style="padding-left: 60px;padding-top: 1px;color: #0b2e13;margin-top: 5px;margin-bottom: 0px"><b style="color: #117ab2">Seats Available : </b><i id="avail">19</i></h3>
+                <h3 style="padding-left: 60px;padding-top: 1px;color: #0b2e13;margin-top: 5px;margin-bottom: 0px"><b style="color: #6d569c">Seats Filled :</b><i id="fill">41</i></h3>
+            </div>
+            <div style="display: inline-flex">
+                <h3 style="padding-left: 90px;padding-top: 1px;color: #fdfff3;margin-top: 5px;margin-bottom: 0px"><b style="color: #0b2e13">Description: </b></h3>
+                <p style="padding-left: 90px;padding-top: 1px;color: #fdfff3;margin-top: 5px;margin-bottom: 0px;color: #062c33">  This course deals with information security and assurance and covers the concepts necessary to secure the cyberspace. It introduces security models, assurance policies, security policies and procedures, and technology</p>
+            </div>
+            <br/>
+            <button type="button" onclick="clicked()" style="margin-left: 300px;margin-top: 20px;background: #af16e8;border-radius: 20px;width: 100px;height: 50px;color: white">Enroll</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
