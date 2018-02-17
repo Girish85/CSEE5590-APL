@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script>
+        function start() {
+            var keyword = document.getElementById("keyword").value;
+            var source = document.getElementById("source");
+            var src = source.options[source.selectedIndex].value;
+            localStorage["key"]=keyword;
+            localStorage["src"]=src;
+            started();
+        }
+        function started() {
+            var keyword = localStorage["key"];
+            var src = localStorage["src"];
+            var xmlhttp = new XMLHttpRequest();
+            var url = "https://newsapi.org/v2/everything?q="+keyword+"&sources="+src+"&apiKey=7a51c92205a54bd4ab71c00a9e780b73";
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    for (var i=0;i<5;i++) {
+                        var title = "title" + i.toString();
+                        var desc = "desc" + i.toString();
+                        var image = "image" + i.toString();
+                        var pub = "pub" + i.toString();
+                        var link = "link" + i.toString();
+                        document.getElementById(title).innerHTML = myArr.articles[i].title.toString();
+                        document.getElementById(desc).innerHTML = myArr.articles[i].description.toString().substring(0,100);
+                        document.getElementById(image).setAttribute("src", myArr.articles[i].urlToImage);
+                        document.getElementById(pub).innerHTML = myArr.articles[i].publishedAt.toString();
+                        document.getElementById(link).setAttribute("href",myArr.articles[i].url);
+                    }
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body onload="started()" bgcolor="#9acd32">
+<div style="width: 800px;height: 40px;display: flex;margin-left: 400px;margin-top: 20px">
+    <form style="width: 800px;height: 40px">
+        <div style="display: flex">
+    <input style="height: 40px ;border-radius: 10px;padding-left: 10px;background-color: antiquewhite;border: 2px midnightblue" type="text" id="keyword" placeholder="Enter Keyword">
+    <select id="source" style="padding-left: 10px;color: white;margin-left: 10px;border-radius: 10px;background-color: #cd55bc">
+        <option>bbc-news</option>
+        <option>cnn</option>
+        <option>abc-news</option>
+        <option>fox-news</option>
+        <option>google-news</option>
+        <option>metro</option>
+        <option>the-guardian-uk</option>
+    </select>
+            <button onclick="start()" style="background-color: #da420c;color: white;width: 150px;border-radius: 10px;border: 2px black;margin-left: 100px">Get News</button>
+        </div>
+    </form>
+</div>
+<div style="height: 800px;width: 1000px;margin-left: 100px;margin-top: 30px" id="hide">
+<div style="display: flex;padding-top: 10px">
+    <div style="height: 140px">
+        <a id="link0"><img id="image0" src="bbc.png" style="width: 200px;height: 100px"/></a>
+        <h5 id="pub0" style="margin: 0px;padding-left: 20px;color: whitesmoke"></h5>
+    </div>
+    <div style="padding-left: 10px;height: 140px">
+    <h2 id="title0" style="margin: 0px;font-family: 'Comic Sans MS';color: darkslategray">Bank deputy warns of Bitcoin bubble risks</h2>
+     <h3 id="desc0" style="margin-bottom: 0px;color: dimgrey">Investors should do their homework, says Bank of England official, as Bitcoin passes $11,000.</h3>
+    </div>
+</div>
+    <div style="display: flex;padding-top: 10px">
+        <div style="height: 140px">
+            <a id="link1"><img id="image1" src="bbc.png" style="width: 200px;height: 100px"/></a>
+            <h5 id="pub1" style="margin: 0px;padding-left: 20px;color: whitesmoke"></h5>
+        </div>
+        <div style="padding-left: 10px;height: 140px">
+            <h2 id="title1" style="margin: 0px;font-family: 'Comic Sans MS';color: darkslategray">Bank deputy warns of Bitcoin bubble risks</h2>
+            <h3 id="desc1" style="margin-bottom: 0px;color: dimgrey">Investors should do their homework, says Bank of England official, as Bitcoin passes $11,000.</h3>
+        </div>
+    </div>
+    <div style="display: flex;padding-top: 10px">
+        <div style="height: 140px">
+            <a id="link2"><img id="image2" src="bbc.png" style="width: 200px;height: 100px"/></a>
+            <h5 id="pub2" style="margin: 0px;padding-left: 20px;color: whitesmoke"></h5>
+        </div>
+        <div style="padding-left: 10px;height: 140px">
+            <h2 id="title2" style="margin: 0px;font-family: 'Comic Sans MS';color: darkslategray">Bank deputy warns of Bitcoin bubble risks</h2>
+            <h3 id="desc2" style="margin-bottom: 0px;color: dimgrey">Investors should do their homework, says Bank of England official, as Bitcoin passes $11,000.</h3>
+        </div>
+    </div>
+    <div style="display: flex;padding-top: 10px">
+        <div style="height: 140px">
+            <a id="link3"><img id="image3" src="bbc.png" style="width: 200px;height: 100px"/></a>
+            <h5 id="pub3" style="margin: 0px;padding-left: 20px;color: whitesmoke"></h5>
+        </div>
+        <div style="padding-left: 10px;height: 140px">
+            <h2 id="title3" style="margin: 0px;font-family: 'Comic Sans MS';color: darkslategray">Bank deputy warns of Bitcoin bubble risks</h2>
+            <h3 id="desc3" style="margin-bottom: 0px;color: dimgrey">Investors should do their homework, says Bank of England official, as Bitcoin passes $11,000.</h3>
+        </div>
+    </div>
+    <div style="display: flex;padding-top: 10px">
+        <div style="height: 140px">
+            <a id="link4"><img id="image4" src="bbc.png" style="width: 200px;height: 100px"/></a>
+            <h5 id="pub4" style="margin: 0px;padding-left: 20px;color: whitesmoke"></h5>
+        </div>
+        <div style="padding-left: 10px;height: 140px">
+            <h2 id="title4" style="margin: 0px;font-family: 'Comic Sans MS';color: darkslategray">Bank deputy warns of Bitcoin bubble risks</h2>
+            <h3 id="desc4" style="margin-bottom: 0px;color: dimgrey">Investors should do their homework, says Bank of England official, as Bitcoin passes $11,000.</h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>

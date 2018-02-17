@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="Girish">
+<head>
+    <title>TicTacToe</title>
+    <style type="text/css">
+        table {
+            margin: 10px;
+            border: black 1px solid;
+        }
+        tr {
+            margin: 2px;
+        }
+        td {
+            border: black 1px solid;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .winning {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body ng-controller="BoardCtrl" background="tic.jpg">
+<div style="margin-left: 520px;margin-top: 30px">
+    <h1 style="color: whitesmoke">Welcome to Tic-Tac-Toe</h1>
+</div>
+<div style="margin-left: 520px;margin-top: 80px">
+<h1 ng-show="board.won" ng-cloak style="color: whitesmoke;margin-left: 30px">{{board.winning_marker}} won the game!</h1>
+<table style="color: blueviolet;background: whitesmoke;width: 300px;height: 250px">
+    <tr ng-repeat="row in board.grid">
+        <td ng-repeat="cell in row" ng-click="board.playCell(cell)" ng-class="{'winning': cell.winning}">
+            <span ng-bind="cell.marker"></span>
+        </td>
+    </tr>
+</table>
+<button ng-click="board.reset()" style="width: 150px;height: 40px ;margin-left: 80px;color: whitesmoke;background-color: #cd55bc;border-radius: 10px">Reset</button>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
