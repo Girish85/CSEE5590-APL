@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YouTweet</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/loader.css">
+  	<script type="text/javascript" src="js/loader.js"></script>
+
+	<style type="text/css">
+		#header {
+			font-size: 4.5em;
+			color: darkorchid;
+			font-family: "Microsoft Tai Le";
+			margin-left: 4%;
+		}
+
+		body {
+			background-color: aliceblue;
+			background-position: center;
+			z-index: -100;
+			font-family: "Microsoft Tai Le";
+		}
+
+		a {
+			text-decoration: none;
+			color:black;
+		}
+
+		a:hover {
+			text-decoration: none;
+			color: black;
+		}
+
+		#query {
+			box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
+			border-radius: 1px;
+			margin-left: 6%;
+		}
+
+		#results li {
+			padding: 10px 0;
+			border-bottom: 1px #ccc dotted;
+			list-style: none;
+			overflow: auto;
+		}
+
+		.list-left {
+			float: left;
+			width: 20%;
+			margin-right:20px;
+		}
+
+		.list-left img {
+			width: 100%;
+			padding: 3px;
+			border:solid #ccc 1px;
+		}
+
+		.list-right {
+			float: right;
+			width: 78%;
+			padding-left:5px;
+		}
+
+		#owner {
+			color: #dd2826;
+		}
+
+		.cTitle {
+			color:#dd2826;
+			font-size: 12px;
+		}
+
+		#results p {
+			font-size: 15px;
+		}
+
+		#results small {
+			font-size: 12px;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="preloader">
+  <div id="status">
+      <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+</div>
+
+	<div class="container">
+		<h1 id="header"><i class="fa fa-video-camera" aria-hidden="true" ></i>&nbsp&nbspYouTweet <sub style="font-size:14px;">"Search through Youtube and go social through Twitter"</sub></h1>
+		<hr style="width:100%;color: black">
+	<div id="display">
+		<table style="width:100%;">
+		<tr>
+		<td style="width:75%;">
+		<form class="form-group" id="search-form">
+			<input type="search" class="form-control" id="query" placeholder="Search your Video..." style="width:85%;height:45px;">
+		</form>
+		</td>
+		<td>
+		<button class="btn btn-default btn-lg" id="search" style="margin-bottom:16px;background-color: darkorchid;color: white">Search</button>
+		</td>
+		</tr>
+		</table>
+		<ul id="results"></ul>
+	</div>
+   </div>
+</body>
+</html>
