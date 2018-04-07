@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TripWise</string>
+    <string name="facebook_app_id">450989002027833</string>
+    <string name="fb_login_protocol_scheme">fb450989002027833</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/trip"
+    tools:context="com.example.usgir.tripwise.Signup">
+
+    <ImageView
+        android:id="@+id/imageView51"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.1"
+        app:srcCompat="@drawable/backwhite" />
+
+    <ImageView
+        android:id="@+id/imageView61"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imageView111"
+        android:layout_marginTop="149dp"
+        android:alpha="0.4"
+        app:srcCompat="@drawable/backwhite" />
+
+    <ImageView
+        android:id="@+id/imageView111"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/imageView1112"
+        android:layout_below="@+id/imageView61"
+        android:layout_marginTop="31dp"
+        android:alpha="0.4"
+        app:srcCompat="@drawable/backwhite" />
+
+    <ImageView
+        android:id="@+id/imageView612"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/imageView111"
+        android:layout_below="@+id/imageView111"
+        android:layout_marginTop="28dp"
+        android:alpha="0.4"
+        app:srcCompat="@drawable/backwhite" />
+
+    <ImageView
+        android:id="@+id/imageView1112"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/imageView612"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:alpha="0.4"
+        app:srcCompat="@drawable/backwhite" />
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/imageView1112"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/backgreen"
+        android:fontFamily="casual"
+        android:text="Signup"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText31"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/editText41"
+        android:layout_alignTop="@+id/imageView61"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="First_Name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <EditText
+        android:id="@+id/editText41"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/imageView111"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Last_Name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <EditText
+        android:id="@+id/editText312"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/editText412"
+        android:layout_alignTop="@+id/imageView612"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <EditText
+        android:id="@+id/editText412"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/imageView1112"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark" />
+
+
+</RelativeLayout>
