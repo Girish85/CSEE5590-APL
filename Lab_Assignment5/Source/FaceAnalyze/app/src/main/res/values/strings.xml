@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FaceAnalyze</string>
+    <string name="result">Male</string>
+    <string name="status">Smiling</string>
+</resources>
