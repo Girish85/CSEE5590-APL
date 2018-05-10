@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.stacktips.speechtotext.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSpeakContainer"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/voiceInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:fontFamily="casual"
+            android:forceHasOverlappingRendering="true"
+            android:text="Welcome to Speaking Exercise "
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btnSpeakContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f5f5f5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_microphone_2" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSpeak"
+            android:layout_margin="10dp"
+            android:text="@string/hint" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:background="@android:color/background_light"
+        android:fontFamily="cursive"
+        android:text="Start Speaking"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="156dp"
+        android:fontFamily="casual"
+        android:text="You Said : "
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_marginEnd="55dp"
+        android:visibility="gone"
+        app:srcCompat="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignTop="@+id/textView7"
+        android:fontFamily="casual"
+        android:paddingTop="5dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+</RelativeLayout>
